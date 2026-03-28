@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aya sehwil_portfolio</title>
+
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2300ffd5%22 font-family=%22monospace%22 font-weight=%22bold%22>a.</text></svg>">
+ </head>
+ <body>
+       
+    
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+ 
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav>
+  <div class="nav-logo">aya.</div>
+  <ul class="nav-links">
+    <li><a href="#hero">_home</a></li>
+    <li><a href="#projects">_work</a></li>
+    <li><a href="#skills">_skills</a></li>
+    <li><a href="#contact">_contact</a></li>
+  </ul>
+  <!-- Dark/Light mode toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span class="toggle-icon">🌙</span>
+    <div class="toggle-track">
+      <div class="toggle-thumb"></div>
+    </div>
+    <span class="toggle-icon">☀️</span>
+  </button>
+</nav>
+ 
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section id="hero">
+  <div class="hero-inner">
+ 
+    <!-- Left: Interactive IDE -->
+    <div class="ide-window reveal">
+      <div class="ide-titlebar">
+        <div class="ide-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="ide-filename">skills.jsx — Aya's Portfolio</span>
+      </div>
+      <div class="ide-body">
+        <!-- Line numbers (JS fills these dynamically) -->
+        <div class="ide-line-nums" id="lineNums"></div>
+        <!-- Code output area -->
+        <div class="ide-code" id="ideCode"><span class="tok-cursor"></span></div>
+      </div>
+    </div>
+ 
+    <!-- Right: Portrait + Title -->
+    <div class="hero-right reveal" style="transition-delay:0.15s">
+      <div class="portrait-wrap">👩‍💻</div>
+      <p class="hero-tagline">// front-end developer</p>
+      <h1 class="hero-title">
+        I am <em>Aya</em>,<br>
+        I turn abstract code<br>into vibrant visual<br>experiences.
+      </h1>
+      <p class="hero-sub">
+        Crafting pixel-perfect interfaces where elegant logic meets stunning design. Let's build something memorable together.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work →</a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Scroll down indicator -->
+  <div class="scroll-down">
+    <span>scroll</span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+ 
+<!-- ============================================================
+     PROJECTS SECTION — FLIP CARDS
+     ============================================================ -->
+<section id="projects">
+  <p class="section-label reveal">02. work</p>
+  <h2 class="section-title reveal">Selected <em style="background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Works</em></h2>
+  <!-- <p class="projects-hint reveal">// hover over a card to flip it ↓</p> -->
+
+  <!-- ── Animated Mockup ───────────────────────────────── -->
+  <div class="mockup-showcase reveal">
+
+    <!-- Laptop frame -->
+    <div class="ms-laptop">
+      <div class="ms-laptop-screen">
+        <div class="ms-laptop-bar">
+          <span class="ms-dot"></span><span class="ms-dot"></span><span class="ms-dot"></span>
+          <div class="ms-url">aya.dev/projects</div>
+        </div>
+        <div class="ms-slides" id="laptopSlides">
+          <div class="ms-slide active" style="background:linear-gradient(135deg,#1a0533,#0d1b3e)">
+            <img src="images/Capture4.webp" alt="KNOT" loading="lazy"/>
+            <div class="ms-slide-label">Tijain — Jewelry Store</div>
+          </div>
+          <div class="ms-slide" style="background:linear-gradient(135deg,#0d1b3e,#1a3322)">
+            <img src="images/section2.webp" alt="Tijain"   loading="lazy" />
+            <div class="ms-slide-label"> IKNOT — Fintech Solution</div>
+          </div>
+          <div class="ms-slide" style="background:linear-gradient(135deg,#1a3322,#2a1a00)">
+            <img src="images/Capture9.webp" alt="Luminary"  loading="lazy"/>
+            <div class="ms-slide-label">Ramadan Vibes Interactive Cultural Portal</div>
+          </div>
+        </div>
+      </div>
+      <div class="ms-laptop-base">
+        <div class="ms-laptop-notch"></div>
+      </div>
+    </div>
+
+    <!-- Mobile frame -->
+    <div class="ms-mobile">
+      <div class="ms-mobile-frame">
+        <div class="ms-mobile-notch"></div>
+        <div class="ms-slides ms-slides-mobile" id="mobileSlides">
+          <div class="ms-slide active" style="background:linear-gradient(135deg,#1a0533,#0d1b3e)">
+            <img src="images/mobile.webp" alt="Tijain" loading="lazy" />
+          </div>
+          <div class="ms-slide" style="background:linear-gradient(135deg,#0d1b3e,#1a3322)">
+            <img src="images/mobile3.webp" alt="Luminary" loading="lazy" />
+          </div>
+          <div class="ms-slide" style="background:linear-gradient(135deg,#1a3322,#1a0533)">
+            <img src="images/Capture5.webp" alt="KNOT" loading="lazy" />
+          </div>
+        </div>
+        <div class="ms-mobile-home"></div>
+      </div>
+    </div>
+
+    <!-- Dots nav -->
+    <div class="ms-dots" id="msDots">
+      <span class="ms-dot-nav active" data-i="0"></span>
+      <span class="ms-dot-nav" data-i="1"></span>
+      <span class="ms-dot-nav" data-i="2"></span>
+    </div>
+  </div>
+
+
+
+     
+  <!-- ── About / Bio Section ───────────────────────────────── -->
+    <div class="about-section reveal">
+    <div class="about-right">
+      <p class="about-label">// who am i</p>
+      <h3 class="about-heading">More Than Just <em>Code</em></h3>
+      <p class="about-bio">
+       I'm Aya — a front-end developer passionate about creating seamless digital experiences that are both visually appealing and highly functional.
+      </p>
+      <p class="about-bio">
+       I specialize in translating designs into responsive, pixel-perfect interfaces, with a strong focus on usability, performance, and clean code practices.
+        With a growing portfolio of projects and a continuous learning mindset, I’m ready to contribute to real-world products, work within teams, and deliver solutions that make an impact.
+      </p>
+ 
+      <div class="about-stats">
+        <div class="about-stat">
+          <span class="about-stat-num" data-target="8">0</span><span class="about-stat-num">+</span>
+          <span class="about-stat-label"> Projects Completed</span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat-num" data-target="2">0</span><span class="about-stat-num">+</span>
+          <span class="about-stat-label">Years Experience</span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat-num" data-target="7">0</span><span class="about-stat-num">+</span>
+          <span class="about-stat-label">Technologies Used</span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat-num" data-target="100">0</span><span class="about-stat-num">%</span>
+          <span class="about-stat-label">Motivated & Passionate</span>
+        </div>
+      </div>
+ 
+      <div class="about-cta">
+        <a href="#contact" class="btn btn-primary">Let's Collaborate →</a>
+        <a href="Aya_Sehweel.pdf" target="_blank" class="btn  btn-ghost">
+         View My CV
+          </a>
+    
+      </div>
+  </div>
+
+  
+
+  
+ 
+</section>
+
+  <p class="projects-hint reveal">// hover over a card to flip it ↓</p>
+  <div class="flip-grid">
+    
+
+    <!-- Card 1: KNOT -->
+    <div class="flip-card reveal" style="transition-delay:0.05s">
+      <div class="flip-card-inner">
+        <!-- Front -->
+        <div class="flip-front">
+          <div class="flip-front-img">
+            <img src="images/WhatsApp Image 2026-03-12 at 2.07.24 PM (1).webp" alt="KNOT Project" loading="lazy" />
+          </div>
+          <div class="flip-front-overlay">
+            <span class="flip-number">01</span>
+            <h3 class="flip-name">IKNOT</h3>
+            <p class="flip-type"> Fintech Solution</p>
+          </div>
+        </div>
+        <!-- Back -->
+        <div class="flip-back">
+          <span class="flip-back-number">01</span>
+          <h3 class="flip-back-title">IKNOT</h3>
+          <p class="flip-back-desc">A sophisticated fintech dashboard designed to streamline rewards management and cashback tracking with a seamless user experience.</p>
+          <div class="flip-back-tags">
+            <span class="tag">Bootstrap 5</span>
+            <span class="tag">AOS (Animate On Scroll)</span>
+            <span class="tag">Responsive Web Design</span>
+          </div>
+          <a href="https://aya-sehwil.github.io/IKON/" class="flip-back-btn">View Project →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Tijain -->
+    <div class="flip-card reveal" style="transition-delay:0.12s">
+      <div class="flip-card-inner">
+        <div class="flip-front">
+          <div class="flip-front-img">
+            <img src="images/ChatGPT Image 18 مارس 2026، 11_23_43 ص.webp" alt="Tijain Project" loading="lazy" />
+          </div>
+          <div class="flip-front-overlay">
+            <span class="flip-number">02</span>
+            <h3 class="flip-name">Tijain</h3>
+            <p class="flip-type">Jewelry Store</p>
+          </div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-back-number">02</span>
+          <h3 class="flip-back-title">Tijain</h3>
+          <p class="flip-back-desc">A premium e-commerce platform for high-end jewelry, featuring dynamic product filtering, elegant animations, and a fully responsive Arabic interface.</p>
+          <div class="flip-back-tags">
+            <span class="tag">Bootstrap 5</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag"> Responsive Design</span>
+          </div>
+          <a href="https://aya-sehwil.github.io/Tijain/" class="flip-back-btn">View Project →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Ramadan Vibes -->
+    <div class="flip-card reveal" style="transition-delay:0.19s">
+      <div class="flip-card-inner">
+        <div class="flip-front">
+          <div class="flip-front-img">
+            <img src="images/Gemini_Generated_Image_1fjv21fjv21fjv21.webp" alt="Luminary Project" loading="lazy" />
+          </div>
+          <div class="flip-front-overlay">
+            <span class="flip-number">03</span>
+            <h3 class="flip-name"> Ramadan Vibes</h3>
+            <p class="flip-type">Interactive Cultural Portal</p>
+          </div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-back-number">03</span>
+          <h3 class="flip-back-title"> Ramadan Vibes</h3>
+          <p class="flip-back-desc">A comprehensive Ramadan experience featuring live prayer times, a digital Tasbih counter, daily religious content, and interactive "Fananees" tips.</p>
+          <div class="flip-back-tags">
+            <span class="tag">Responsive Design</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag"> Bootstrap 5</span>
+          </div>
+          <a href="https://aya-sehwil.github.io/RamadanVibes/" class="flip-back-btn">View Project →</a>
+        </div>
+      </div>
+    </div>
+        <!-- Card 4: Luminary -->
+    <div class="flip-card reveal" style="transition-delay:0.19s">
+      <div class="flip-card-inner">
+        <div class="flip-front">
+          <div class="flip-front-img">
+            <img src="images/Gemini_Generated_Image_iivs3aiivs3aiivs.webp" alt="Luminary Project" loading="lazy" />
+          </div>
+          <div class="flip-front-overlay">
+            <span class="flip-number">04</span>
+            <h3 class="flip-name"> Fadi Network</h3>
+            <p class="flip-type">Internet network</p>
+          </div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-back-number">04</span>
+          <h3 class="flip-back-title"> Fadi Network</h3>
+          <p class="flip-back-desc">A high-performance professional network landing page featuring interactive service sections, optimized user flow, and modern glassmorphism aesthetics.</p>
+          <div class="flip-back-tags">
+            <span class="tag">AOS Library</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">Bootstrap 5</span>
+          </div>
+          <a href="https://aya-sehwil.github.io/Fadi-network/" class="flip-back-btn">View Project →</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Card 5: New Project placeholder -->
+    <div class="flip-card reveal" style="transition-delay:0.26s">
+      <div class="flip-card-inner">
+        <div class="flip-front flip-front-new">
+          <div class="flip-new-icon">✦</div>
+          <h3 class="flip-name">Next Project</h3>
+          <p class="flip-type">Coming Soon</p>
+        </div>
+        <div class="flip-back flip-back-new">
+          <span class="flip-back-number">04</span>
+          <h3 class="flip-back-title">Your Project?</h3>
+          <p class="flip-back-desc">Have an idea you'd like to bring to life? Let's collaborate and build something extraordinary together.</p>
+          <a href="#contact" class="flip-back-btn">Let's Talk →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+ 
+<!-- ============================================================
+     SKILLS — ORBIT
+     ============================================================ -->
+<section id="skills">
+  <p class="section-label reveal" style="justify-content:center">03. skills</p>
+  <h2 class="section-title reveal">The Skill <em style="background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Orbit</em></h2>
+ 
+  <!-- Orbit system -->
+  <div class="orbit-system reveal">
+ 
+    <!-- Static decorative rings -->
+    <div class="orbit" style="width:190px;height:190px;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+    <div class="orbit" style="width:300px;height:300px;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+    <div class="orbit" style="width:420px;height:420px;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+ 
+    <!-- Centre: JavaScript -->
+    <div class="orbit-center">
+      <span>𝐉𝐒</span>
+      <span class="orbit-center-label">JavaScript</span>
+    </div>
+ 
+    <!-- Orbit 1: HTML -->
+    <div class="orbit-1-wrapper">
+      <div class="skill-icon">
+        <div class="skill-icon-bg" title="HTML5">🟧</div>
+        <span class="skill-icon-label">HTML5</span>
+      </div>
+    </div>
+ 
+    <!-- Orbit 2: CSS -->
+    <div class="orbit-2-wrapper">
+      <div class="skill-icon">
+        <div class="skill-icon-bg" title="CSS3">🟦</div>
+        <span class="skill-icon-label">CSS3</span>
+      </div>
+    </div>
+ 
+    <!-- Orbit 2 extra: React -->
+    <div class="orbit-extra-wrapper">
+      <div class="skill-icon">
+        <div class="skill-icon-bg" title="React">⚛️</div>
+        <span class="skill-icon-label">React</span>
+      </div>
+    </div>
+ 
+    <!-- Orbit 3: Git -->
+    <div class="orbit-3-wrapper">
+      <div class="skill-icon">
+        <div class="skill-icon-bg" title="Git">🔀</div>
+        <span class="skill-icon-label">Git</span>
+      </div>
+    </div>
+ 
+    <!-- Orbit 3 extra: Figma -->
+    <div class="orbit-extra2-wrapper">
+      <div class="skill-icon">
+        <div class="skill-icon-bg" title="Figma">🎨</div>
+        <span class="skill-icon-label">Figma</span>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Additional skill pills -->
+  <div class="skills-list reveal">
+  <div class="skill-pill">⚡ JavaScript</div>
+  <div class="skill-pill">🎨 CSS3</div>
+  <div class="skill-pill"> 🎨 HTML5</div>
+  <div class="skill-pill">📱 Responsive Design</div>
+  <div class="skill-pill">🧩 DOM Manipulation</div>
+  <div class="skill-pill">🎬 AOS Animations</div>
+  <div class="skill-pill">⚛️ React (Basic)</div>
+  <div class="skill-pill">🌐 Git & GitHub</div>
+  <div class="skill-pill">🛠️ WordPress (Basic)</div>
+</div>
+</section>
+ 
+<!-- ============================================================
+     CONTACT SECTION
+     ============================================================ -->
+<section id="contact">
+  <div class="contact-inner">
+    <p class="section-label reveal">04. contact</p>
+    <h2 class="section-title reveal">Let's Build<br><em style="background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Something</em> Together</h2>
+ 
+    <p class="contact-intro reveal">
+      Have a project in mind, a question, or just want to say hello? My inbox is always open. Drop me a message and I'll get back to you!
+    </p>
+<div class="contact-form glass reveal">
+  <form id="my-form" action="https://formspree.io/f/xbdpljpo" method="POST">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="fname">Name</label>
+        <input type="text" id="fname" name="name" class="form-control" placeholder="Your name" required />
+      </div>
+      <div class="form-group">
+        <label for="femail">Email</label>
+        <input type="email" id="femail" name="email" class="form-control" placeholder="your@email.com" required />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fsubject">Subject</label>
+      <input type="text" id="fsubject" name="subject" class="form-control" placeholder="What's this about?" />
+    </div>
+    <div class="form-group">
+      <label for="fmessage">Message</label>
+      <textarea id="fmessage" name="message" class="form-control" placeholder="Tell me about your project..." required></textarea>
+    </div>
+    <button type="submit" class="btn btn-submit btn-primary">
+      Send Message ✦
+    </button>
+  </form>
+</div>
+ 
+    <!-- Social links -->
+  <div class="contact-socials reveal">
+  <a href="https://github.com/Aya-sehwil" target="_blank" class="social-link">
+    <i class="fab fa-github"></i> GitHub
+    </a>
+  <a href="https://www.linkedin.com/in/aya-sehwel-10848b35a/" target="_blank" class="social-link">
+    <i class="fab fa-linkedin"></i> LinkedIn
+     </a>
+
+     <a href="https://www.behance.net/ayasehwel " target="_blank" class="social-link">
+    <i class="fab fa-behance"></i> Behance
+  </a>
+
+  <a href="https://www.upwork.com/freelancers/~0103c7ad4a743d05e3" target="_blank" class="social-link">
+    <i class="fas fa-briefcase"></i> Upwork
+  </a>
+  
+  
+    </div>
+  </div>
+</section>
+ 
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<!-- <footer>
+  <span class="footer-copy">© 2026 Aya — Code-to-Canvas Journey</span>
+  <span class="footer-copy">Designed & Built with <span class="footer-heart">♥</span> in code</span>
+</footer> -->
+
+
+<footer>
+  <div class="footer-content">
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+       <i class="fas fa-arrow-up"></i>
+    </div>
+    <!-- <h3 class="footer-logo">Aya<span>.</span></h3> -->
+    <div class="nav-logo footer-logo-style">aya.</div>
+    <div class="footer-links">
+       <span class="footer-copy">© 2026 — Built with <span class="footer-heart">♥</span></span>
+       <div class="footer-tagline">Turning complex logic into beautiful pixels.</div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
